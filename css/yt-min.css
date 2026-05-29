@@ -1,0 +1,76 @@
+/* Compléments hors Bootstrap : dégagement header fixe, chips sans JS, titres, page lecture :target */
+body {
+    padding-top: 56px;
+    font-family: Roboto, "Segoe UI", system-ui, sans-serif;
+}
+
+.yt-line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.yt-chip-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.yt-chip-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Filtres type YouTube sans JS : radio caché + label */
+.yt-chip-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.yt-chip-scroll label.btn {
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.yt-chip-input:checked + label.btn {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #212529;
+    --bs-btn-border-color: #212529;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #212529;
+    --bs-btn-hover-border-color: #212529;
+    background-color: var(--bs-btn-bg);
+    color: var(--bs-btn-color);
+    border-color: var(--bs-btn-border-color);
+}
+
+.yt-chip-input:not(:checked) + label.btn {
+    background-color: var(--bs-secondary-bg);
+    border-color: transparent;
+    color: inherit;
+}
+
+/* Cartes miniature : léger relief au survol (CSS seul) */
+.yt-card-thumb {
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.yt-card-thumb:hover {
+    box-shadow: 0 4px 14px rgba(15, 15, 15, 0.12);
+}
+
+/* Page watch : une section visible selon l’ancre #watch-vN ; défaut v1 si aucune ancre */
+.watch-panel {
+    display: none;
+}
+
+.watch-panel:target {
+    display: block !important;
+}
+
+body:not(:has(.watch-panel:target)) #watch-v1 {
+    display: block !important;
+}

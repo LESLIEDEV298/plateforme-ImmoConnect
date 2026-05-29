@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ImmConnect,location de domicile et depannage</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <div id="background">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-light bg-white py-2 shadow-sm position-sticky top-0 z-3"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-bold fs-2 text-or" href="#">
+            ImmoConnect
+          </a>
+
+          <button
+            class="btn-outline-or d-none d-md-block"
+            onclick="scrollToForm()"
+          >
+            Se connecter
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <span class="badge-or fade-up"> 🚀 Bientôt disponible </span>
+
+              <h1 class="display-3 fw-bold mb-4 fade-up delay-1">
+                Trouvez votre <span class="text-or">domicile</span><br />
+                ou votre <span class="text-or">dépanneur</span><br />
+                en toute confiance
+              </h1>
+
+              <p class="lead mb-4 fade-up delay-2">
+                ImmoConnect est la première plateforme qui réunit
+                <strong>bailleurs, locataires et artisans</strong>
+                (électriciens, plombiers) au même endroit. Simple, rapide et
+                sécurisé.
+              </p>
+
+              <!-- Avantages -->
+              <div class="row g-3 mb-4 fade-up delay-3">
+                <div class="col-md-4">
+                  <div class="trust-badge">
+                    <i class="bi bi-check-circle-fill text-or"></i>
+                    <span class="small fw-semibold">Sans commission</span>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="trust-badge">
+                    <i class="bi bi-shield-check-fill text-or"></i>
+                    <span class="small fw-semibold">Artisans vérifiés</span>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="trust-badge">
+                    <i class="bi bi-phone-fill text-or"></i>
+                    <span class="small fw-semibold">Paiement mobile</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Boutons -->
+              <div class="d-flex flex-wrap gap-3 fade-up delay-3">
+                <button class="btn-or" onclick="scrollToForm()">
+                  <i class="bi bi-bell-fill me-2"></i>
+                  Être informé du lancement
+                </button>
+
+                <button class="btn-outline-or" onclick="scrollToAvantages()">
+                  <i class="bi bi-arrow-down me-2"></i>
+                  Découvrir les avantages
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="py-4 bg-white border-bottom">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-6 col-md-3 mb-3 mb-md-0">
+            <div class="counter-box">
+              <div class="counter-number" id="compteurLeads">0</div>
+              <p class="text-muted small mb-0">personnes déjà inscrites</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 mb-3 mb-md-0">
+            <div class="counter-box">
+              <div class="counter-number" id="compteurJours">30</div>
+              <p class="text-muted small mb-0">jours avant le lancement</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="counter-box">
+              <div class="counter-number">100%</div>
+              <p class="text-muted small mb-0">artisans vérifiés</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="counter-box">
+              <div class="counter-number">24/7</div>
+              <p class="text-muted small mb-0">service disponible</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="avantages" class="py-5 py-md-8">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge-or mb-3">Pour qui ?</span>
+          <h2 class="display-5 fw-bold mb-3">
+            Une solution pour <span class="text-or">chaque besoin</span>
+          </h2>
+          <p class="lead text-secondary mx-auto" style="max-width: 600px">
+            ImmConnect a été pensé pour simplifier la vie de tous
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-avantage p-4">
+              <div class="icone-avantage">
+                <i class="bi bi-person-walking"></i>
+              </div>
+              <h3 class="h4 mb-3">
+                🔍 Pour les <span class="text-or">locataires</span>
+              </h3>
+              <p class="text-secondary mb-3">
+                Trouvez un <strong>domicile</strong> (studio, appartement,
+                maison) en quelques clics
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i>Pas
+                  de frais d'agence
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i
+                  >Contact direct avec le bailleur
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i
+                  >Techniciens disponibles 24h/24
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-avantage p-4">
+              <div class="icone-avantage"><i class="bi bi-building"></i></div>
+              <h3 class="h4 mb-3">
+                🏠 Pour les <span class="text-or">bailleurs</span>
+              </h3>
+              <p class="text-secondary mb-3">
+                Publiez vos <strong>domiciles</strong> et trouvez des locataires
+                rapidement
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i>À
+                  partir de <strong class="text-or">7000FCFA/mois</strong>
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i>Pas
+                  de commission cachée
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i
+                  >Statistiques de visibilité
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-avantage p-4">
+              <div class="icone-avantage"><i class="bi bi-tools"></i></div>
+              <h3 class="h4 mb-3">
+                🔧 Pour les <span class="text-or">techniciens</span>
+              </h3>
+              <p class="text-secondary mb-3">
+                Électriciens, plombiers : recevez des demandes dans votre
+                quartier
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i>À
+                  partir de <strong class="text-or">5000fcfa/mois</strong>
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i
+                  >Clients à proximité
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-or me-2 small"></i>Mise
+                  en avant possible
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION BÉNÉFICES CLÉS (pourquoi ImmConnect) -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge-or mb-3">Pourquoi nous choisir ?</span>
+            <h2 class="display-5 fw-bold mb-4">
+              La plateforme qui <span class="text-or">change tout</span>
+            </h2>
+            <div class="benefice-item">
+              <div class="benefice-icone">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">Gagnez un temps précieux</h4>
+                <p class="text-secondary mb-0">
+                  Plus besoin de chercher sur 10 sites différents. Tout est au
+                  même endroit.
+                </p>
+              </div>
+            </div>
+            <div class="benefice-item">
+              <div class="benefice-icone">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">Transactions sécurisées</h4>
+                <p class="text-secondary mb-0">
+                  Paiements via Orange Money, MTN Mobile. Vos données sont
+                  protégées.
+                </p>
+              </div>
+            </div>
+            <div class="benefice-item">
+              <div class="benefice-icone"><i class="bi bi-star-fill"></i></div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">Artisans certifiés</h4>
+                <p class="text-secondary mb-0">
+                  Chaque technicien est vérifié avant d'apparaître sur la
+                  plateforme.
+                </p>
+              </div>
+            </div>
+            <div class="benefice-item">
+              <div class="benefice-icone"><i class="bi bi-chat-dots"></i></div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">Support réactif</h4>
+                <p class="text-secondary mb-0">
+                  Une équipe à votre écoute 7j/7 pour vous accompagner.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded-4 shadow-lg">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="text-center p-3 border rounded-3">
+                    <i class="bi bi-people-fill fs-1 text-or"></i>
+                    <h3 class="h2 fw-bold mt-2">3</h3>
+                    <p class="text-muted small">types d'utilisateurs</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="text-center p-3 border rounded-3">
+                    <i class="bi bi-geo-alt-fill fs-1 text-or"></i>
+                    <h3 class="h2 fw-bold mt-2">+10</h3>
+                    <p class="text-muted small">villes couvertes</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="text-center p-3 border rounded-3">
+                    <i class="bi bi-house-heart-fill fs-1 text-or"></i>
+                    <h3 class="h2 fw-bold mt-2">100+</h3>
+                    <p class="text-muted small">domiciles disponibles</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="text-center p-3 border rounded-3">
+                    <i class="bi bi-tools fs-1 text-or"></i>
+                    <h3 class="h2 fw-bold mt-2">50+</h3>
+                    <p class="text-muted small">artisans partenaires</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TÉMOIGNAGES -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge-or mb-3">Ils nous font confiance</span>
+          <h2 class="display-5 fw-bold">
+            Ce que nos futurs <span class="text-or">utilisateurs</span> disent
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 h-100 rounded-4">
+              <i class="bi bi-quote fs-1 text-or opacity-50"></i>
+              <p class="mt-2">
+                "Je cherchais un studio et un électricien fiable. ImmConnect va
+                me simplifier la vie !"
+              </p>
+              <div class="mt-auto">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-person-circle fs-2 text-or"></i>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Marie D.</h6>
+                    <small class="text-muted">Future locataire</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 h-100 rounded-4">
+              <i class="bi bi-quote fs-1 text-or opacity-50"></i>
+              <p class="mt-2">
+                "Je loue deux appartements. Avec ImmConnect, je vais trouver des
+                locataires sans payer de commission."
+              </p>
+              <div class="mt-auto">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-person-circle fs-2 text-or"></i>
+                  <div>
+                    <h6 class="mb-0 fw-bold">François K.</h6>
+                    <small class="text-muted">Bailleur</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 h-100 rounded-4">
+              <i class="bi bi-quote fs-1 text-or opacity-50"></i>
+              <p class="mt-2">
+                "Électricien à Douala, j'ai hâte de recevoir des demandes de
+                clients près de chez moi."
+              </p>
+              <div class="mt-auto">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-person-circle fs-2 text-or"></i>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Jean M.</h6>
+                    <small class="text-muted">Électricien</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION FORMULAIRE -->
+    <section
+      id="formulaire"
+      class="py-5"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--gris-clair) 0%,
+          var(--blanc) 100%
+        );
+      "
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-card p-4 p-md-5 text-center">
+              <div class="mb-4">
+                <i class="bi bi-envelope-paper fs-1 text-or"></i>
+              </div>
+              <h2 class="display-6 fw-bold mb-3">
+                Soyez parmi les <span class="text-or">premiers</span>
+              </h2>
+              <p class="text-secondary mb-4">
+                Recevez une notification dès le lancement d'ImmConnect.<br />Pas
+                de spam, juste une alerte unique.
+              </p>
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control form-control-custom"
+                      id="nom"
+                      placeholder="Votre nom"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control form-control-custom"
+                      id="email"
+                      placeholder="Votre email *"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <select class="form-select form-control-custom" id="profil">
+                      <option value="" selected disabled>Je suis...</option>
+                      <option value="locataire">🔍 Un locataire</option>
+                      <option value="bailleur">🏠 Un bailleur</option>
+                      <option value="technicien">
+                        🔧 Un technicien (électricien/plombier)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-or w-100">
+                      <i class="bi bi-bell-fill me-2"></i>M'alerter au lancement
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div
+                id="messageConfirmation"
+                class="alert alert-success mt-4 text-center"
+                style="
+                  display: none;
+                  background-color: rgba(212, 175, 55, 0.1);
+                  border-color: var(--or);
+                  color: var(--noir);
+                "
+              >
+                <i class="bi bi-check-circle-fill me-2"></i>Merci ! Nous vous
+                informerons du lancement d'ImmConnect.
+              </div>
+              <p class="text-muted small mt-3">
+                <i class="bi bi-shield-check"></i> Nous ne partageons jamais vos
+                données
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge-or mb-3">Questions fréquentes</span>
+          <h2 class="display-5 fw-bold">
+            Tout ce que vous devez <span class="text-or">savoir</span>
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-semibold">
+                  💰 Combien coûte l'utilisation d'ImmConnect ?
+                </h5>
+                <i class="bi bi-chevron-down text-or"></i>
+              </div>
+              <div class="faq-answer mt-3">
+                Pour les locataires, c'est <strong>totalement gratuit</strong>.
+                Les bailleurs paient 7000FCFA/mois pour publier leurs domiciles.
+                Les techniciens paient 5000fcfa/mois pour être visibles.
+              </div>
+            </div>
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-semibold">
+                  🔒 Comment sont vérifiés les techniciens ?
+                </h5>
+                <i class="bi bi-chevron-down text-or"></i>
+              </div>
+              <div class="faq-answer mt-3">
+                Chaque technicien doit fournir ses diplômes et une pièce
+                d'identité. Nous vérifions les documents avant validation du
+                profil.
+              </div>
+            </div>
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-semibold">
+                  📱 Y a-t-il une application mobile ?
+                </h5>
+                <i class="bi bi-chevron-down text-or"></i>
+              </div>
+              <div class="faq-answer mt-3">
+                Oui ! ImmConnect sera disponible sur Android (et prochainement
+                iOS) en plus du site web.
+              </div>
+            </div>
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-semibold">
+                  🌍 Dans quelles villes ImmConnect est-il disponible ?
+                </h5>
+                <i class="bi bi-chevron-down text-or"></i>
+              </div>
+              <div class="faq-answer mt-3">
+                Au lancement, ImmConnect sera disponible à Douala, Yaoundé, et
+                les villes environnantes. D'autres villes suivront rapidement.
+              </div>
+            </div>
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-semibold">
+                  💳 Quels modes de paiement sont acceptés ?
+                </h5>
+                <i class="bi bi-chevron-down text-or"></i>
+              </div>
+              <div class="faq-answer mt-3">
+                Nous acceptons Orange Money, MTN Mobile Money et les cartes
+                bancaires.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CTA FINAL -->
+    <section class="py-5 bg-noir text-center">
+      <div class="container">
+        <h2 class="display-5 fw-bold text-white mb-3">
+          Prêt à rejoindre <span class="text-or">ImmConnect</span> ?
+        </h2>
+        <p class="text-white-50 mb-4">
+          Inscrivez-vous pour être informé du lancement
+        </p>
+        <button class="btn-or btn-lg px-5" onclick="scrollToForm()">
+          <i class="bi bi-envelope-fill me-2"></i>Je m'inscris gratuitement
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h3 class="text-or mb-3">ImmConnect</h3>
+            <p class="text-white-50">
+              Location de domiciles et dépannage (électriciens, plombiers), tout
+              en un.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="mb-3">Liens utiles</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">À propos</a></li>
+              <li class="mb-2"><a href="#">Contact</a></li>
+              <li class="mb-2"><a href="#">Mentions légales</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function scrollToForm() {
+        document
+          .getElementById("formulaire")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+      function scrollToAvantages() {
+        document
+          .getElementById("avantages")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+      function toggleFaq(element) {
+        element.classList.toggle("active");
+      }
+
+      // Compteur leads animé
+      let count = 0;
+      const target = 284;
+      const counterEl = document.getElementById("compteurLeads");
+      const updateCounter = () => {
+        if (count < target) {
+          count += Math.ceil(target / 55);
+          if (count > target) count = target;
+          counterEl.innerText = count;
+          setTimeout(updateCounter, 30);
+        }
+      };
+      updateCounter();
+
+      let daysLeft = 30;
+      const daysEl = document.getElementById("compteurJours");
+      const intervalDays = setInterval(() => {
+        if (daysLeft > 0) {
+          daysLeft--;
+          daysEl.innerText = daysLeft;
+        } else clearInterval(intervalDays);
+      }, 86400000);
+
+      // Formulaire simulation
+      const form = document.getElementById("contactForm");
+      const msgDiv = document.getElementById("messageConfirmation");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        msgDiv.style.display = "block";
+        form.reset();
+        setTimeout(() => {
+          msgDiv.style.display = "none";
+        }, 5000);
+      });
+    </script>
+
+   
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

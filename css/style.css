@@ -1,0 +1,94 @@
+/* Variables — palette de la maquette */
+:root {
+  --accent: #f85c5c;
+  --hero-overlay: rgba(0, 0, 0, 0.55);
+}
+
+/* Navbar transparente sur le hero */
+.navbar-portfolio {
+  background: transparent !important;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.navbar-portfolio .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  padding-left: 0.9rem !important;
+  padding-right: 0.9rem !important;
+}
+
+.navbar-portfolio .nav-link:hover,
+.navbar-portfolio .nav-link.active {
+  color: var(--accent) !important;
+}
+
+.btn-contact {
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 0;
+  font-size: 0.85rem;
+  padding: 0.4rem 1.1rem;
+}
+
+.btn-contact:hover {
+  background-color: var(--accent);
+  color: #fff !important;
+}
+
+/* Section hero plein écran */
+.hero {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80");
+  /* Remplacez par : url("../images/mountain-bg.jpg"); quand vous avez votre image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-name {
+  color: var(--accent);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+/* Indicateur "Scroll Down" en bas à gauche */
+.scroll-hint {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.scroll-hint::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
